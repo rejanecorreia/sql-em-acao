@@ -44,3 +44,37 @@ Faça um ensaio com 2–3 navegadores/perfis diferentes, confirme que apenas a p
 - Anderson e Krathwohl: Taxonomia de Bloom revisada.
 - Watt e Eng, *Database Design*, capítulo 9: https://opentextbc.ca/dbdesign01/chapter/chapter-9-integrity-rules-and-constraints/
 - Mitrovic e Ohlsson (2016): https://doi.org/10.1007/s40593-015-0049-9
+
+## Simulação opcional de até 10 participantes
+
+O painel inclui o botão **Simular até 10 usuários** / **Desativar simulação**. Em salas recém-preparadas, a simulação começa habilitada. Quando houver menos de 10 participantes reais, o site completa o exemplo do SQLite com nicknames fictícios claramente sinalizados **(simulado)**. Os personagens simulados **não são contas Firebase, não consomem vagas, não são presenças reais e não entram na contagem de alunos conectados**. Conforme alunos reais entram, os exemplos simulados são substituídos automaticamente. A professora pode desligar a simulação antes da apresentação, se desejar. Os `INSERTs` e resultados SQL exibem os exemplos simulados para fins didáticos.
+
+
+### Ajuste de apresentação (17/11/2026)
+- O objetivo da disciplina apresenta o `INSERT INTO TURMAS` no próprio bloco.
+- A continuidade da aprendizagem apresenta três `INSERT INTO AULAS`, cada um após seu encontro.
+- A seção recolhível “🎓 Fundamentação pedagógica da sequência didática” fica no rodapé da página, inclusive durante os desafios.
+- Firebase, regras, simulação de 10 usuários e painel foram preservados.
+
+
+### Ajuste do Desafio 2 (17/11/2026)
+- Consulta inclui NICKNAME, NOME_COMPLETO, DATA_AULA e TEMA e filtra com `WHERE ... AND ... IN (...)`.
+- A simulação garante os personagens SELECT, FROM, WHERE, AND, JOIN e IN, sem duplicar papéis de alunos reais.
+- Se menos de 10 pessoas estiverem no banco de demonstração, completa até 10. Com 8–10 alunos reais, pode haver mais de 10 linhas didáticas para incluir JOIN e IN.
+- Simulados não são presenças reais nem documentos adicionais do Firebase. Nenhuma mudança em `firestore.rules`.
+
+
+### Participações históricas fictícias (17/11/2026)
+- A partir do Desafio 2, o banco SQLite local inclui oito pessoas com nomes fictícios na turma Banco de Dados, em IDs 201–208.
+- São criadas **6 participações simuladas em 06/08/2026** (AULA 101) e **7 em 22/10/2026** (AULA 102), com alguns nomes repetidos entre as datas para permitir comparações SQL.
+- Os IDs de participações históricas começam em 1001, separadas das entradas atuais em 19/11 (AULA 103).
+- A seção do Desafio 2 permite visualizar os INSERTs fictícios e uma consulta histórica usando `JOIN` e `IN`.
+- **Não são registros reais de presença. Não são gravados no Firebase e não modificam as regras do Firestore.**
+
+### Desafio 5 — Avaliar (versão revisada)
+- Substituído “A IA errou o SQL!” por **“Qual consulta responde melhor?”**.
+- O aluno executa duas consultas sobre presenças anteriores e decide qual exclui quem também participou em 19/11.
+- Para as duas alternativas terem resultados distintos, foi inserida uma participação **fictícia** em 22/10 para o personagem SELECT, exclusivamente no SQLite, sem alterar o Firebase.
+- Os controles “Executar consulta A/B no editor” executam SQL real e há feedback para a escolha.
+- A simulação passa a garantir também LIKE para o Desafio 3, sem duplicar nicknames reais.
+- Não houve mudança em regras nem coleções do Firebase.
