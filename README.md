@@ -78,3 +78,18 @@ O painel inclui o botão **Simular até 10 usuários** / **Desativar simulação
 - Os controles “Executar consulta A/B no editor” executam SQL real e há feedback para a escolha.
 - A simulação passa a garantir também LIKE para o Desafio 3, sem duplicar nicknames reais.
 - Não houve mudança em regras nem coleções do Firebase.
+
+
+## Apresentar pelo painel da professora (novo)
+
+Abra `painel.html` e faça login com a conta autorizada. Clique em **Preparar sala** se necessário.
+Os controles de etapa ficam acima de **Espelho da aula · visão dos alunos**.
+O espelho carrega a mesma `index.html` em uma janela integrada e acompanha automaticamente
+a etapa indicada no Firestore. Você pode usar o editor e executar SELECT no espelho.
+O botão **Ampliar espelho** aumenta a área visual para projeção.
+As listas de participantes e o roteiro de comandos ficam em seções recolhíveis.
+A professora não recebe nickname ao abrir a página espelhada.
+O espelho usa a mesma origem/site para compartilhar a sessão de autenticação Firebase.
+Não altere as regras do Firestore para este recurso.
+
+Arquivos alterados: `painel.html`, `painel.js`, `style.css`, `app.js`.
