@@ -93,3 +93,15 @@ O espelho usa a mesma origem/site para compartilhar a sessão de autenticação 
 Não altere as regras do Firestore para este recurso.
 
 Arquivos alterados: `painel.html`, `painel.js`, `style.css`, `app.js`.
+
+
+## Apresentação em aba separada
+- `painel.html`: acesso exclusivo da professora, controla as etapas e simulação.
+- `apresentacao.html`: abra pelo botão **Abrir apresentação** no painel. Compartilhe somente esta aba na reunião. Ela mostra a página `index.html` em tela ampla e acompanha o Firebase em tempo real.
+- `index.html`: continua sendo a página para os alunos.
+- A apresentação precisa ser aberta no mesmo perfil de navegador em que a professora já entrou no painel, pois o login do Firebase é compartilhado por origem/perfil.
+- As consultas e os resultados exibidos na apresentação são executados no editor SQLite local daquela aba. O avanço das etapas e o conjunto de participantes são sincronizados pelo Firebase, mas o texto digitado no editor de cada aluno não é espelhado automaticamente.
+- **Publicação:** atualize `painel.html`, `painel.js`, `style.css` e adicione `apresentacao.html`. Não há mudança nas regras do Firestore.
+
+## Ajuste da entrada interativa
+Ao reservar uma identidade, a página do aluno exibe **NICKNAME:** (emoji + comando SQL), **NOME COMPLETO:** (descrição fictícia em primeira pessoa) e **Sua identidade está reservada**. Não afeta coleções, regras ou dados do Firebase.

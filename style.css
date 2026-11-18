@@ -12,3 +12,9 @@
 .presenter-expanded .presenter-container{max-width:none;width:100%;padding:0 10px}
 .presenter-expanded #lessonMirror{height:83vh}
 @media(max-width:760px){#lessonMirror{min-height:480px;height:67vh}}
+
+/* Acesso a apresentação em aba separada */
+.open-presentation{display:inline-flex;align-items:center;background:#246bbd;border-radius:10px;color:white;padding:10px 16px;text-decoration:none;font-weight:750}.open-presentation:hover{background:#1b5799;color:white}
+
+/* Entrada interativa: rótulos visíveis e explicação da identidade SQL */
+.identity-row{margin:4px 0 13px;line-height:1.6}.identity-row>b{color:#174d86}.identity-nickname{display:inline-block;font-size:20px;color:#174d86;margin-left:6px}

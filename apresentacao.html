@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apresentação · SQL em Ação</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{background:#f5f8fc}
+    .presentation-top{background:#123357;color:#fff;padding:9px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .presentation-top strong{font-size:15px}
+    .presentation-top span{color:#deecfb;font-size:12px}
+    .presentation-top button{padding:6px 12px;background:#eaf4ff;color:#123357;border:0}
+    #view{display:block;width:100%;height:calc(100dvh - 58px);border:none;background:#f5f8fc}
+    @media(max-width:620px){.presentation-top{flex-wrap:wrap}#view{height:calc(100dvh - 92px)}}
+    @media print{.presentation-top{display:none}#view{height:100vh}}
+  </style>
+</head>
+<body>
+  <div class="presentation-top">
+    <div><strong>🎓 SQL em Ação · Apresentação</strong> <span>• tela compartilhável da aula</span></div>
+    <button id="fullscreen" type="button">⛶ Tela cheia</button>
+  </div>
+  <iframe id="view" title="Aula SQL em Ação — mesma experiência dos alunos" src="./index.html" allow="fullscreen"></iframe>
+  <script>
+    document.getElementById('fullscreen').addEventListener('click',async()=>{
+      if(document.fullscreenElement){await document.exitFullscreen();return}
+      try{await document.documentElement.requestFullscreen()}catch(e){alert('Não foi possível entrar em tela cheia. Você pode usar F11 no navegador.')}
+    });
+  </script>
+</body>
+</html>
